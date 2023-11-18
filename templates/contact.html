@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Your existing styles */
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Styles (if not included in 'nav.html') */
+        /* Add your navigation styles here */
+
+<!--        .container {-->
+<!--            width: 80%;-->
+<!--            margin: 0 auto;-->
+<!--            padding-top: 20px;-->
+<!--        }-->
+
+        .contact-section {
+            margin-top: 30px;
+            padding: 30px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .contact-section form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-section label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        .contact-section input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-section input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        #feedbackConfirmation {
+            display: none;
+            color: green;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+          footer {
+            text-align: center;
+            padding: 250px 0;
+            background-color: ;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+
+    <div class="container">
+        <div class="mission-values-section">
+            <!-- Your existing Mission and Values sections -->
+        </div>
+
+        <!-- Additional Contact Us section with a feedback form -->
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Email: <span>store@schoolstore.com</span></p>
+            <p>Phone: <span>+1 987-654-3210</span></p>
+
+            <!-- Feedback Form -->
+            <form id="feedbackForm">
+                <label for="feedbackMessage">Feedback:</label><br>
+                <textarea id="feedbackMessage" name="feedbackMessage" rows="6" placeholder="Type your feedback here..." required></textarea><br><br>
+                <input type="submit" value="Send Feedback">
+            </form>
+
+            <!-- Feedback Confirmation Message -->
+            <p id="feedbackConfirmation">Thank you for your feedback!</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and display confirmation message
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Here, you can include code to send the form data to your server using AJAX or handle it as needed.
+            // For this example, I'll just show a confirmation message.
+            document.getElementById('feedbackConfirmation').style.display = 'block';
+
+            // Optional: Reset the form after submission
+            document.getElementById('feedbackForm').reset();
+
+            // You can add AJAX code here to send form data to the server for processing
+            // For example, using fetch() or XMLHttpRequest to send data to a backend endpoint.
+        });
+    </script>
+  <footer>
+        <p>&copy; 2023 School Store. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

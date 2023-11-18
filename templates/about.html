@@ -1,0 +1,105 @@
+{% include 'nav.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - School Store</title>
+
+    {% block style %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #3498db, #ffffff);
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-us,
+        .value-points {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h2,
+        .value-points h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .about-us p,
+        .value-points ul {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #495057;
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+
+<!--    <header>-->
+<!--        <h1>Welcome to the School Store</h1>-->
+<!--    </header>-->
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At School Store, our mission is to be the premier destination for students, educators, and parents seeking quality academic resources. We take pride in offering carefully selected textbooks, pens perfect for note-taking, and exam papers aimed at enhancing study experiences. Our commitment is to support your educational endeavors with convenience and excellence.</p>
+        <p>Thank you for choosing us as your educational partner. We continuously work to expand our offerings and improve your shopping experience. Your success is our priority.</p>
+    </section>
+
+    <section class="value-points">
+        <h2>Our Values</h2>
+        <ul>
+            <li><strong>Quality Resources:</strong> Carefully selected textbooks, study materials, and stationery to aid learning.</li>
+            <li><strong>Convenience:</strong> Easy access to essential educational tools and resources.</li>
+            <li><strong>Commitment to Excellence:</strong> Dedicated to enhancing study experiences for students, educators, and parents.</li>
+            <li><strong>Continuous Improvement:</strong> Always striving to expand our offerings and enhance your shopping experience.</li>
+            <li><strong>Customer Success:</strong> Your success in education is our primary focus and motivation.</li>
+        </ul>
+    </section>
+
+    {% block content %}
+    <!-- Your Django content block goes here -->
+    {% endblock %}
+
+
+    <footer>
+        <p>&copy; 2023 School Store. All rights reserved.</p>
+    </footer>
+
+    {% block footer_style %}
+    <style>
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+    </style>
+    {% endblock %}
+
+</body>
+
+</html>
